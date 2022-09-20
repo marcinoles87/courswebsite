@@ -1,14 +1,14 @@
 import React from 'react';
 import './App.css';
 
+import StoreProvider from './store/StoreProvider';
 
+const App = () => (
 
-function App() {
-  return (
-    <div className="App">
-      app
-    </div>
-  );
-}
+  <StoreProvider>
+    <header>Hello World</header>
+  </StoreProvider>
+)
+  
 
 export default App;
