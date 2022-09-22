@@ -19,7 +19,8 @@ div .logo {
 }
 
 div .title {
-    flex-grow: 1;
+    height: auto;
+    width: auto;
     background-color: #fff;
     color:rgb(92, 108, 255);
 }
