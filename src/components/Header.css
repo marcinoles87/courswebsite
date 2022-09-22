@@ -9,3 +9,17 @@
     border-bottom: 2px solid black;
     box-shadow: 0 3px 8px black;
 }
+
+div .logo {
+    width: 30px;
+    height: 30px;
+    margin-left:20px;
+    background-color: rgb(131, 122, 252);
+
+}
+
+div .title {
+    flex-grow: 1;
+    background-color: #fff;
+    color:rgb(92, 108, 255);
+}

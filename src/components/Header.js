@@ -9,10 +9,10 @@ const Header = () => {
 
     return ( 
         <header>
-            <div className="logo">
-                <h1>Super kursy dla programistow</h1>
+            <div className="logo"></div>
+                <h1 className="title">Super kursy dla programistow  !!!</h1>
                 <button>{setProperlyLabel}</button>
-            </div>
+            
         </header>
      );
 }
