@@ -1,4 +1,6 @@
 import React from 'react';
+
+import Header from '../src/components/Header'
 import './App.css';
 
 import StoreProvider from './store/StoreProvider';
@@ -6,7 +8,7 @@ import StoreProvider from './store/StoreProvider';
 const App = () => (
 
   <StoreProvider>
-    <header>Hello World</header>
+    <Header/>
   </StoreProvider>
 )
   
