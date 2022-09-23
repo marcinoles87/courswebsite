@@ -4,7 +4,7 @@ import { StoreContext } from "../../store/StoreProvider";
 
 import Modal from '../modal/modal'
 
-import { default as LoginFormStyle } from './LoginFormStyle' ;
+// import './components/LoginForm/LoginFormStyle' ;
 
 const LoginForm = (handleOnClose , isModalOpen) => {
 
@@ -22,11 +22,26 @@ const LoginForm = (handleOnClose , isModalOpen) => {
 
     }
 
+    const resetStateOfInputs = () =>{
+        setLogin('');
+        setPassword('');
+        setValidateMessage('');
+    }
+
     const handleOnSubmit = async event => {
         event.preventDefault();
         const {data , status } = await request.post(
             '/users',
             {login,password});
+
+            if(status===200) {
+                setUser(data.user);
+                resetStateOfInputs();
+                handleOnCloseModal();
+
+            }else {
+                setValidateMessage(data.message);
+            }
     }
 
     const validateMessageComponent = validateMessage.length
@@ -34,7 +49,7 @@ const LoginForm = (handleOnClose , isModalOpen) => {
     : null;
 
     return(
-        <Modal handleOnClose={handleOnClose} isOpen={} shouldBeClosedOnOutsideClick={true} >
+        <Modal handleOnClose={handleOnClose} isOpen={isModalOpen} shouldBeClosedOnOutsideClick={true} >
             {validateMessageComponent}
             <form className="login" method="post" onSubmit={handleOnSubmit}>
                 <div className="row">

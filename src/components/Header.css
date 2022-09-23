@@ -22,5 +22,6 @@ div .title {
     height: auto;
     width: auto;
     background-color: #fff;
+    border-bottom: 2px solid black;
     color:rgb(92, 108, 255);
 }

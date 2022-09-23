@@ -23,7 +23,7 @@ const Header = () => {
         <header>
             <div className="logo"></div>
                 <h1 className="title">Super kursy dla programistow  !!!</h1>
-                <button>{setProperlyLabel}</button>
+                <button onClick={handleOnClick}>{setProperlyLabel}</button>
                 <LoginForm handleOnClose={handleOnClose} isModalOpen={isModalOpen}/>
         </header>
      );

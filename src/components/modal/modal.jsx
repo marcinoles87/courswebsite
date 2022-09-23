@@ -1,10 +1,15 @@
 import React, { useEffect, useRef } from "react";
-import { ReactDOM } from "react-dom";
+
+import ReactDOM from 'react-dom';
+
+
 
 const Modal = ({children , handleOnClose ,isOpen , shouldBeClosedOnOutsideClick}) => {
 
     const modalRef = useRef(null);
     const previuseActiveElement = useRef(null);
+
+   
 
     useEffect(() => {
         if(!modalRef.current){
@@ -15,7 +20,7 @@ const Modal = ({children , handleOnClose ,isOpen , shouldBeClosedOnOutsideClick}
 
         if(isOpen) {
             previuseActiveElement.current = document.activeElement;
-            modal.showModal();
+            // modal.showModal();
 
         }else if (previuseActiveElement.current) {
             modal.close();
@@ -33,7 +38,7 @@ const Modal = ({children , handleOnClose ,isOpen , shouldBeClosedOnOutsideClick}
         };
         modal.addEventListener('cancel', handleCancel);
 
-        return() => {
+        return () => {
             modal.removeEventListener('cancel',handleCancel)
         }
     },[handleOnClose]);
@@ -49,7 +54,7 @@ const Modal = ({children , handleOnClose ,isOpen , shouldBeClosedOnOutsideClick}
 
     }
     
-    return ReactDOM.creactePortal((
+    return ReactDOM.createPortal((
         <dialog className="portal" ref={modalRef} onClick={handleOutsideClick}>
             {children}
         </dialog>
