@@ -3,6 +3,8 @@ import React from 'react';
 import Header from '../src/components/Header'
 import  '../src/components/Header.css';
 import './App.css';
+import AsideMenu from './AsideMenu/AsideMenu';
+
 
 import {HashRouter as Router } from 'react-router-dom'
 
