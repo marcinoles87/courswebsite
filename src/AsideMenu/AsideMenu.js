@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 
-import Aside from '../AsideMenu/Aside'
+import Aside from './Aside.css'
 import { StoreContext } from "../store/StoreProvider";
 import AdminMenu from "./AdminMenu";
 import UserMenu from "./UserMenu";
@@ -14,7 +14,7 @@ const AsideMenu = () => {
 
     const {user} = useContext(StoreContext)
 
-    const adminMenuComponent =  user.accessLevel === ADMIN_TYPE ?
+    const adminMenuComponent =  user === ADMIN_TYPE ?
     <AdminMenu/>
     :null;
 

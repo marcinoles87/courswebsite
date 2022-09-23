@@ -1,19 +1,22 @@
-.header {
+header {
     position: fixed;
     top:0;
     left: 0;
     right: 0;
     display: flex;
+    flex-direction: row;
     height:  60px;
-    background-color: rgb(82, 82, 82);
     border-bottom: 2px solid black;
     box-shadow: 0 3px 8px black;
+    background-color: rgba(0, 49, 47, 0.404);
 }
 
-div .logo {
+ div .logo {
+    
     width: 30px;
     height: 30px;
     margin-left:20px;
+    margin-right:20px;
     background-color: rgb(131, 122, 252);
 
 }
@@ -21,8 +24,8 @@ div .logo {
 div .title {
     height: auto;
     width: auto;
-    background-color: #fff;
-    border-bottom: 2px solid black;
+    margin-right: 20px;
     color:rgb(92, 108, 255);
-    background-color: rgb(141, 141, 141);
+   
+   
 }
