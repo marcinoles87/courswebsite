@@ -1,0 +1,6 @@
+.main {
+    margin:0 auto;
+    max-width: 1366px;
+    flex-grow: 1;
+    background-color: rgb(255, 218, 53);
+}
