@@ -18,7 +18,7 @@ const App = () => (
     <Router>
     <div className='content-wrapper'>
       <AsideMenu />
-      <Content />
+      <Content/>
     </div>
     </Router>
     

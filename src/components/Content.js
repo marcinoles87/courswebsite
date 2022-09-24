@@ -3,6 +3,7 @@ import { Route  , Routes, Navigate } from "react-router-dom";
 import { StoreContext } from "../store/StoreProvider";
 import ContentStyle from './ContentStyle.css';
 import Courses from './Courses';
+import Course from "./Course";
 
 const Content = () => {
 
@@ -16,7 +17,7 @@ const Content = () => {
     return ( 
        <main className="main">
         <Routes>
-            <Route exact path="/"  render={ () => <Courses/>}/>
+            <Route exact path="/" element={<Course/>}  render={ () => <Courses/>}/>
             { isUserLogged && <Route exact path="/my-courses"  render={ () => <p>Moje kursy</p>}/> }
             { isUserLogged && <Route exact path="/manage-courses"  render={ () => <p>Zarzadzanie kursami</p>}/> }
             {/* <Navigate to="/" /> */}
