@@ -3,7 +3,7 @@ import { StoreContext } from "../store/StoreProvider";
 
 const UserCourses = () => {
     const { user , courses } = useContext(StoreContext);
-    console.log(user);
+    
     return ( 
 
         

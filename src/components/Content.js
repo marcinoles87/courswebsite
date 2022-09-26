@@ -9,6 +9,7 @@ import UserCourses from "../UserCourses/UserCourses";
 const Content = () => {
 
     const { user }  = useContext(StoreContext);
+    console.log(user);
 
     const isUserLogged = Boolean(user);
     const isAdmin = user?.accessLevel === 1;
@@ -17,6 +18,7 @@ const Content = () => {
 
     return ( 
        <main className="main">
+       
         <Routes>
             <Route exact path="/" element={<Course/>}  render={ () => <Courses/>}/>
             { isUserLogged && <Route exact path="/my-courses"  render={ () => <UserCourses/>}/> }
