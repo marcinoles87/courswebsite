@@ -2,7 +2,7 @@ import React from "react";
 
 import CourseStyle from './CourseStyle.css';
 
-const Course = ( {authors , img , price , title}) => {
+const Course = ( {authors , img , price , title} ) => {
 
 // const allAuthors = authors.join(', ');
 console.log(authors);

@@ -4,6 +4,7 @@ import { StoreContext } from "../store/StoreProvider";
 import ContentStyle from './ContentStyle.css';
 import Courses from './Courses';
 import Course from "./Course";
+import UserCourses from "../UserCourses/UserCourses";
 
 const Content = () => {
 
@@ -18,7 +19,7 @@ const Content = () => {
        <main className="main">
         <Routes>
             <Route exact path="/" element={<Course/>}  render={ () => <Courses/>}/>
-            { isUserLogged && <Route exact path="/my-courses"  render={ () => <p>Moje kursy</p>}/> }
+            { isUserLogged && <Route exact path="/my-courses"  render={ () => <UserCourses/>}/> }
             { isUserLogged && <Route exact path="/manage-courses"  render={ () => <p>Zarzadzanie kursami</p>}/> }
             {/* <Navigate to="/" /> */}
         </Routes>

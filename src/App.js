@@ -10,6 +10,7 @@ import Content from './components/Content';
 import {HashRouter as Router } from 'react-router-dom'
 
 import StoreProvider from './store/StoreProvider';
+import Course from './components/Course';
 
 const App = () => (
 
@@ -17,6 +18,7 @@ const App = () => (
     <Header/>
     <Router>
     <div className='content-wrapper'>
+      
       <AsideMenu />
       <Content/>
     </div>
