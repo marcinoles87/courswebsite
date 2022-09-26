@@ -5,6 +5,9 @@ import CourseStyle from './CourseStyle.css';
 const Course = ( {authors , img , price , title}) => {
 
 // const allAuthors = authors.join(', ');
+console.log(authors);
+console.log(img);
+
     return ( 
 
         <article>
