@@ -37,7 +37,7 @@ const StoreProvider = ( {children}) => {
 
     return (
         <StoreContext.Provider value={
-        [courses ]
+        {courses , user , setCourses , setUser}
        }
         >
        

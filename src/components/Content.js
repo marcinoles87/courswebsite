@@ -21,7 +21,7 @@ const Content = () => {
     return ( 
        <main className="main">
         <Routes>
-            <Route exact path="/" element={<Course/>}  render={ () => <Courses/>}/>
+            <Route exact path="/" element={<Courses/>}  render={ () => <Courses/>}/>
             <Route exact path="/my-courses"  render={ () => <UserCourses/>}/> 
             <Route exact path="/manage-courses"  render={ () => <p>Zarzadzanie kursami</p>}/> 
             {/* <Navigate to="/" /> */}
