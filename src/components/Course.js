@@ -14,7 +14,8 @@ const Course = ( { authors , img , price , title} ) => {
         <article>
             <h1>{authors}</h1>
             <h3 className="article">{title}</h3>
-            {/* <img alt="title" className="imgStyle" src={img}></img> */}
+
+            <img src={img}></img>
             <p>cena kursu to : blaaaa{price}</p>
             <h1>{price}</h1>
             

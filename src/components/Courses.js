@@ -11,7 +11,7 @@ const Courses = () => {
     
     const coursesElements = courses.map(course => <Course key={course.id} {...course}/>);
 
-   console.log(coursesElements);
+
     
     return (
         <>
