@@ -4,7 +4,7 @@ import CourseStyle from './CourseStyle.css';
 
 const Course = ( { authors , img , price , title} ) => {
 
-// const allAuthors = authors.join(', ');
+
 
  
     

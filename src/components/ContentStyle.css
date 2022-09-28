@@ -2,5 +2,6 @@
     margin:0 auto;
     max-width: 1366px;
     flex-grow: 1;
-    background-color: rgb(255, 218, 53);
+    background-color: rgb(253, 249, 232);
+    font-size: 20px;
 }
