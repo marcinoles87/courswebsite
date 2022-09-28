@@ -14,6 +14,7 @@ const AsideMenu = () => {
 
     const {user} = useContext(StoreContext)
 
+
     const adminMenuComponent =  user === ADMIN_TYPE ?
     <AdminMenu/>
     :null;

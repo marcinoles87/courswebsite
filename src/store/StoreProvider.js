@@ -2,7 +2,7 @@ import React, { createContext, useEffect, useState } from 'react';
 
 import request from '../helper/request';
 
-export const StoreContext = createContext(null);
+
 
 const StoreProvider = ( {children}) => {
 
@@ -17,8 +17,9 @@ const StoreProvider = ( {children}) => {
 
         setCourses(data.courses);
 
-        console.log(data.courses)
-        console.log(data.courses[3])
+      
+
+
        
     };
 
@@ -29,10 +30,17 @@ const StoreProvider = ( {children}) => {
         
     },[]);
 
-    
+    console.log(courses)
+
+  
+
 
     return (
-        <StoreContext.Provider value={[courses,user,setCourses,setUser]} >
+        <StoreContext.Provider value={
+        [courses ]
+       }
+        >
+       
         {children}
       
         </StoreContext.Provider>
@@ -42,3 +50,4 @@ const StoreProvider = ( {children}) => {
 
 
 export default StoreProvider;
+export const StoreContext = createContext(null);

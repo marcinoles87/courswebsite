@@ -7,11 +7,11 @@ const Courses = () => {
 
     const {courses} = useContext(StoreContext);
 
-   
+    
     
     const coursesElements = courses.map(course => <Course key={course.id} {...course}/>);
 
-   
+   console.log(coursesElements);
     
     return (
         <>

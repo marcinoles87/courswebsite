@@ -8,21 +8,22 @@ import UserCourses from "../UserCourses/UserCourses";
 
 const Content = () => {
 
-    const { user }  = useContext(StoreContext);
-    console.log(user);
+    const { courses}  = useContext(StoreContext);
 
-    const isUserLogged = Boolean(user);
-    const isAdmin = user?.accessLevel === 1;
+ 
+    
 
-    const ADMIN_TYPE = 1;
+    // const isUserLogged = Boolean(user);
+    // const isAdmin = user?.accessLevel === 1;
+
+    // const ADMIN_TYPE = 1;
 
     return ( 
        <main className="main">
-       
         <Routes>
             <Route exact path="/" element={<Course/>}  render={ () => <Courses/>}/>
-            { isUserLogged && <Route exact path="/my-courses"  render={ () => <UserCourses/>}/> }
-            { isUserLogged && <Route exact path="/manage-courses"  render={ () => <p>Zarzadzanie kursami</p>}/> }
+            <Route exact path="/my-courses"  render={ () => <UserCourses/>}/> 
+            <Route exact path="/manage-courses"  render={ () => <p>Zarzadzanie kursami</p>}/> 
             {/* <Navigate to="/" /> */}
         </Routes>
         </main>
